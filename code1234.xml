@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_setmotors" id="50" inline="true" x="-45" y="-38">
+  <block type="movement_setmotors" id="1" inline="true" x="-45" y="-38">
     <value name="BOTHMOVLEFT">
       <block type="sensor_line" id="2">
         <field name="LINE">MIDDLE</field>
@@ -11,15 +11,15 @@
       </block>
     </value>
     <next>
-      <block type="led_select" id="59" inline="true">
+      <block type="led_select" id="4" inline="true">
         <field name="ACTION">FLASH</field>
         <value name="LED">
-          <block type="sensor_line" id="84">
+          <block type="sensor_line" id="5">
             <field name="LINE">LEFT</field>
           </block>
         </value>
       </block>
     </next>
   </block>
-  <block type="robot_delay" id="5" inline="true" x="588" y="590"></block>
+  <block type="robot_delay" id="6" inline="true" x="588" y="590"></block>
 </xml>
