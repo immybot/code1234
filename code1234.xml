@@ -18,8 +18,37 @@
             <field name="LINE">LEFT</field>
           </block>
         </value>
+        <next>
+          <block type="movement_forward" id="21">
+            <next>
+              <block type="oled_color" id="30">
+                <field name="OBJECT">GREEN</field>
+                <next>
+                  <block type="movement_left" id="74">
+                    <next>
+                      <block type="movement_right" id="84"></block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
       </block>
     </next>
+  </block>
+  <block type="logic_operation" id="56" inline="true" x="-41" y="136">
+    <field name="OP">LAND</field>
+    <value name="A">
+      <block type="sensor_object" id="50">
+        <field name="OBJECT">REAR</field>
+      </block>
+    </value>
+    <value name="B">
+      <block type="sensor_object" id="91">
+        <field name="OBJECT">RIGHTSIDE</field>
+      </block>
+    </value>
   </block>
   <block type="robot_delay" id="6" inline="true" x="588" y="590"></block>
 </xml>
