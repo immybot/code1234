@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_setmotors" id="1" inline="true" x="-45" y="-38">
+  <block type="movement_setmotors" id="1" inline="true" x="-93" y="-141">
     <value name="BOTHMOVLEFT">
       <block type="sensor_line" id="2">
         <field name="LINE">MIDDLE</field>
@@ -26,7 +26,33 @@
                 <next>
                   <block type="movement_left" id="74">
                     <next>
-                      <block type="movement_right" id="84"></block>
+                      <block type="movement_right" id="84">
+                        <next>
+                          <block type="multimedia_playwav" id="108">
+                            <field name="WAV">2 </field>
+                            <next>
+                              <block type="led_select" id="117" inline="true">
+                                <field name="ACTION">ON</field>
+                                <value name="LED">
+                                  <block type="logic_operation" id="56" inline="true">
+                                    <field name="OP">LAND</field>
+                                    <value name="A">
+                                      <block type="sensor_object" id="50">
+                                        <field name="OBJECT">REAR</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="sensor_object" id="91">
+                                        <field name="OBJECT">RIGHTSIDE</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
                     </next>
                   </block>
                 </next>
@@ -36,19 +62,6 @@
         </next>
       </block>
     </next>
-  </block>
-  <block type="logic_operation" id="56" inline="true" x="-48" y="139">
-    <field name="OP">LAND</field>
-    <value name="A">
-      <block type="sensor_object" id="50">
-        <field name="OBJECT">REAR</field>
-      </block>
-    </value>
-    <value name="B">
-      <block type="sensor_object" id="91">
-        <field name="OBJECT">RIGHTSIDE</field>
-      </block>
-    </value>
   </block>
   <block type="robot_delay" id="6" inline="true" x="588" y="590"></block>
 </xml>
